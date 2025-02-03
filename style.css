@@ -54,6 +54,459 @@ section {
     background-position: center;
     background-attachment: fixed;
 }
+.cover {
+    background-color: #222; /* تغيير خلفية داكنة بدلاً من الصورة */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.cover-content .profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* إضافة مسافة بين الصورة والنص */
+    max-width: 1000px;
+    width: 100%;
+}
+
+.cover-content .profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+}
+
+.cover-content .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover-content .text-content {
+    text-align: left;
+    max-width: 600px;
+}
+
+.cover-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.cover-content h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.cover-content p {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+/* تنسيق الأيقونات */
+.cover-content .icons {
+    display: flex;
+    gap: 20px;
+}
+
+.cover-content .icons i {
+    font-size: 2rem;
+    color: #007BFF;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cover-content .icons i:hover {
+    transform: scale(1.2);
+}
+
+
+.about {
+    background-color: #f9f9f9;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.about .title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #007BFF;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about .title::after {
+    content: '';
+    width: 60%;
+    height: 3px;
+    background-color: #007BFF;
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.about .content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.about p:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.about p:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.about p:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Highlighting text */
+.highlight {
+    color: #007BFF;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Hover animation for the title */
+.about .title:hover::after {
+    width: 80%;
+}
+
+/* Animation for fading in and moving up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.education {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+.education .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #007BFF;
+    text-align: center;
+}
+
+/* Content Grid */
+.education .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.education .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Hover Effect */
+.education .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Info */
+.education .card .info h3 {
+    color: #007BFF;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.education .card .info p {
+    color: #555;
+    font-size: 1rem;
+    margin: 8px 0;
+}
+
+/* Button Styling */
+.education .card .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.education .card .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Icon for added decoration */
+.education .card .info::before {
+    content: "\f0c0"; /* Using Font Awesome icon for Education */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 2rem;
+    color: #007BFF;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.skills {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skills {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ضبط الشبكة لجعل المهارات في مربعات متجاورة */
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* جعل المهارات في مربعات متجاورة */
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* جعل الأقسام (sections) في شبكة متجاورة */
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* تنسيق الأقسام */
+.skills {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* جعل المهارات في مربعات متجاورة */
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* تنسيق الأيقونات */
+.skill-card i {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+
+.skill-card h3 {
+    color: #007BFF;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* تنسيق قائمة المهارات */
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-card ul li {
+    font-size: 1rem;
+    color: #444;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.skill-card ul li i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: #007BFF;
+} 
+
+
+
+.testimonials .testimonial-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.testimonials .testimonial-card:hover {
+    transform: scale(1.05);
+}
+.cta {
+    background-color: #3a6cf4;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
 
 .main h2 {
     color: #fff;
